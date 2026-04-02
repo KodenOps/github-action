@@ -23,3 +23,8 @@ jobs:
         run: echo "Testing Started"
       - name: Testing Completed
         run: echo "Testing Completed"
+  myName: 
+    runs-on: ubuntu-latest
+    steps:
+      - name: Call My name
+        run: echo ${{MY_NAME}} 
