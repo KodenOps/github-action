@@ -22,7 +22,7 @@ jobs:
       - name: Testing Step
         run: echo "Testing Started"
       - name: Testing Completed
-        run: echo "Testing Completed"
+        run: echo "Testing is Completed"
   myName: 
     runs-on: ubuntu-latest
     steps:
