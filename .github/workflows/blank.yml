@@ -25,6 +25,7 @@ jobs:
         run: echo "Testing is Completed"
   myName: 
     runs-on: ubuntu-latest
+    needs: test
     steps:
       - name: Call My name
         run: echo ${{vars.MY_NAME}} 
