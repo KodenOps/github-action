@@ -28,4 +28,4 @@ jobs:
     needs: test
     steps:
       - name: Call My name
-        run: echo ${{vars.MY_NAME}} 
+        run: echo ${{secrets.DOCKER_USERNAME}} 
