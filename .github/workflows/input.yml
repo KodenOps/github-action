@@ -16,4 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Deploying To Environment
-        run: echo "Deploying to ${{inputs.environment}}"
+        run: | 
+          echo "Deploying to ${{inputs.environment}}"
+          echo "Deploying from ${{github.repository}}"
+          echo "Deployment by ${{github.actor}}"
