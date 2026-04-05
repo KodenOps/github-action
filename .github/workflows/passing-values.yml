@@ -12,6 +12,6 @@ jobs:
     steps:
       - name: Generating variables
         id: step1
-        run: echo "version=${{inputs.environment}}" >> $OUTPUT_VAR
+        run: echo "version=${{inputs.environment}}" >> $GITHUB_OUTPUT
       - name: Using Variable
         run: echo "Our Value Is ${{steps.step1.outputs.version }}"
