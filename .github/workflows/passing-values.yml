@@ -1,0 +1,17 @@
+name: passing_values_workflow
+on: 
+  workflow_dispatch:
+    inputs:
+       environment : 
+        description: Enter your default value
+        default: "10"
+        required: true
+jobs:
+  myJob:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Generating variables
+        id: step1
+        run: echo "${{inputs.environment}} >> $OUTPUT_VAR
+      - name: Using Variable
+        run: echo "Our Value Is ${{steps.step1.outputs }}"
