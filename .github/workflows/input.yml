@@ -6,6 +6,12 @@ on:
         description: Choose the environment to deploy
         required: true
         default: dev
+        type: choice
+        options:
+          - dev
+          - prod
+          - uat
+          - pilot
 jobs:
   deploy_input:
     runs-on: ubuntu-latest
